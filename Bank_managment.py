@@ -59,7 +59,7 @@ class User:
             self.balance += amount
             self.bank.total_balance += amount
             print(
-                f'Succesfully Deposit!!!"\n"Deposit amount is {amount} and Current balance {self.balance}')
+                f'Successfully Deposit!!!"\n"Deposit amount is {amount} and Current balance {self.balance}')
             self.transaction_history.append(
                 "Deposited is : " + str(amount) + ' by ' + str(self.name) + " date : " + str(date.today()))
             if self.id in self.store_users:
@@ -80,7 +80,7 @@ class User:
                 use = self.store_users[self.id]
                 use['balance'] = self.balance
         else:
-            print(f'this {amount} is not avaialbe in balance')
+            print(f'this {amount} is not available in balance')
 
     def show_available_balance(self):
         print(
@@ -141,7 +141,7 @@ class Admin:
         self.store_admin[self.id] = (vars(person))
 
     def show_total_balance(self):
-        print('The total avialable balance is : ',
+        print('The total available balance is : ',
               self.bank.total_balance, " of bank")
 
     def show_total_loan_amount(self):
